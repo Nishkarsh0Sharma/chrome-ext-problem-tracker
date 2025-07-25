@@ -18,6 +18,7 @@ function onProblemPage(){
 }
 
 function addBookmarkButton(){
+    console.log("triggeing");
     // check if the current page is problem page or not and if the bookmarkbutton is already present or not
     if(!onProblemPage() || document.getElementById("add-bookmark-button")) return;
 
@@ -84,7 +85,7 @@ function extractUniqueID(url){
 function getCurrentBookmarks(){
     return new Promise((resolve,reject) => {
         // fetching the current bookmark from chrome storage or if not present then return empty array
-        chrome.storage.sync.get("[AZ_PROBLEM_KEY]", (data)=>{
+        chrome.storage.sync.get("AZ_PROBLEM_KEY", (data)=>{
             resolve(data.AZ_PROBLEM_KEY || []);
         })
     })
