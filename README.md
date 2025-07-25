@@ -350,7 +350,7 @@ If you encounter any issues:
   <img src="https://github.com/Nishkarsh0Sharma.png" width="100" height="100" style="border-radius: 50%;" alt="Nishkarsh Sharma">
   
   **Nishkarsh Sharma**  
-  *Chrome Extension Developer & Educator*
+  *Chrome Extension Developer*
   
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nishkarsh0Sharma)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nishkarsh-sharma-20689b269/)
