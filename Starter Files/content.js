@@ -1,4 +1,5 @@
 const bookmarkImgURL = chrome.runtime.getURL("assets/bookmark.png");
+const AZ_PROBLEM_KEY = "AZ_PROBLEM_KEY";
 
 // if any changes in the DOM then call the addBookmarkButton function
 const observer = new MutationObserver(()=>{
@@ -25,23 +26,8 @@ function addBookmarkButton(){
     const bookmarkButton = document.createElement('img');
     bookmarkButton.id = "add-bookmark-button";
     bookmarkButton.src = bookmarkImgURL;
-    bookmarkButton.style.cursor = 'pointer';
-    bookmarkButton.style.height = "30px";
-    bookmarkButton.style.width = "30px";
-    bookmarkButton.style.marginLeft = '10px';
-    bookmarkButton.style.marginTop = '3px';
-    bookmarkButton.style.transition = "transform 0.2s ease, filter 0.2s ease";
-    
-    bookmarkButton.addEventListener("mouseover", () => {
-    bookmarkButton.style.transform = "scale(1.1)";
-    bookmarkButton.style.filter = "brightness(1.2)";
-    });
-    
-    bookmarkButton.addEventListener("mouseout", () => {
-      bookmarkButton.style.transform = "scale(1)";
-      bookmarkButton.style.filter = "brightness(1)";
-    });
-    
+    bookmarkButton.classList.add("add-bookmark-button");
+
     const askDoubtButton = document.getElementsByClassName("d-flex flex-row gap-2 justify-content-between m-0 hide-scrollbar ")[0];
     askDoubtButton.insertAdjacentElement("afterend", bookmarkButton);
 
@@ -85,8 +71,8 @@ function extractUniqueID(url){
 function getCurrentBookmarks(){
     return new Promise((resolve,reject) => {
         // fetching the current bookmark from chrome storage or if not present then return empty array
-        chrome.storage.sync.get("AZ_PROBLEM_KEY", (data)=>{
-            resolve(data.AZ_PROBLEM_KEY || []);
-        })
+        chrome.storage.sync.get([AZ_PROBLEM_KEY], (results) => {
+            resolve(results[AZ_PROBLEM_KEY] || []);
+        });
     })
 }
