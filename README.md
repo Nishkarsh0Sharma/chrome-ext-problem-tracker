@@ -1,31 +1,38 @@
 # Chrome Extension: AZ Problem Tracker
 
 <div align="center">
-  <img src="Starter Files/assets/ext-icon.png" alt="AZ Problem Tracker Logo" width="128" height="128">
+  <img src="assets/ext-icon.png" alt="AZ Problem Tracker Logo" width="128" height="128">
   
   [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285f4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chrome.google.com/webstore)
   [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
   [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 </div>
 
 ## 📖 Introduction  
-**AZ Problem Tracker** is a powerful Chrome extension designed to help students and developers efficiently bookmark and manage coding problems on the [maang.in](https://maang.in) platform. This project serves as an excellent learning resource for Chrome extension development, covering essential concepts like manifest files, storage APIs, content scripts, and modern web development practices.
+
+**AZ Problem Tracker** is a powerful Chrome extension designed to help students and developers efficiently bookmark and manage coding problems on the [maang.in](https://maang.in) platform. This extension streamlines your coding practice by allowing you to save, organize, and quickly access your favorite problems.
+
+Perfect for competitive programmers, interview preparation, and coding enthusiasts who want to keep track of their problem-solving journey!
 
 ### ✨ Key Features
+
 - 🔖 **Smart Bookmarking**: One-click problem bookmarking with automatic duplicate detection
 - 📱 **Intuitive Popup Interface**: Clean, responsive design for managing bookmarks  
 - 💾 **Persistent Storage**: Chrome sync storage for cross-device bookmark synchronization
 - 🎯 **Problem Navigation**: Direct links to bookmarked problems with one click
 - 🗑️ **Safe Deletion**: Confirmation dialogs prevent accidental bookmark removal
 - 🎨 **Responsive Design**: Optimized for various screen sizes and Chrome themes
+- ⚡ **Fast Performance**: Lightweight extension with minimal resource usage
+- 🔄 **Real-time Updates**: Dynamic content detection for single-page applications
 
-### 🎯 Learning Objectives
-- Master Chrome extension architecture and development workflow
-- Understand DOM manipulation and content script injection
-- Learn Chrome Storage API for data persistence
-- Practice modern JavaScript (ES6+) and web development best practices
-- Gain experience with Chrome extension debugging and testing
+### 🎯 Perfect For
+
+- 👨‍💻 **Competitive Programmers**: Track problems across different contests
+- 🎓 **Students**: Organize practice problems by topic or difficulty  
+- 💼 **Job Seekers**: Save interview preparation problems
+- 🏃‍♂️ **Coding Enthusiasts**: Build a personal problem library
 
 ---
 
@@ -33,20 +40,21 @@
 
 ```
 chrome-ext-problem-tracker/
-├── 📁 Starter Files/           # Development version with base setup
-│   ├── 📄 manifest.json        # Extension configuration
-│   ├── 📄 content.js           # Content script for DOM manipulation
-│   ├── 📄 popup.html           # Extension popup interface
-│   ├── 📄 popup.js             # Popup functionality
-│   ├── 📄 popup.css            # Popup styling
-│   ├── 📄 content.css          # Content script styling
-│   ├── 📄 background.js        # Background service worker
-│   └── 📁 assets/              # Icons and images
-│       ├── 🖼️ ext-icon.png
-│       ├── 🖼️ bookmark.png
-│       ├── 🖼️ play.png
-│       └── 🖼️ delete.png
-└── 📄 README.md               # Documentation
+├── 📄 manifest.json        # Extension configuration & permissions
+├── 📄 content.js           # Content script for DOM manipulation
+├── 📄 popup.html           # Extension popup interface
+├── 📄 popup.js             # Popup functionality & event handlers
+├── 📄 popup.css            # Popup styling & responsive design
+├── 📄 content.css          # Content script styling
+├── 📄 background.js        # Background service worker
+├── 📁 assets/              # Icons and images
+│   ├── 🖼️ ext-icon.png     # Extension icon
+│   ├── 🖼️ bookmark.png     # Bookmark button icon
+│   ├── 🖼️ play.png         # Play/open button icon
+│   └── 🖼️ delete.png       # Delete button icon
+├── 📄 .gitignore           # Git ignore rules
+├── 📄 LICENSE              # MIT License
+└── 📄 README.md            # This documentation
 ```
 
 ---
@@ -54,159 +62,323 @@ chrome-ext-problem-tracker/
 ## 🚀 Getting Started  
 
 ### 📋 Prerequisites  
+
 Before you begin, ensure you have:
 - 💻 **Basic knowledge** of JavaScript, HTML, and CSS
 - 📝 **Text editor** (Visual Studio Code recommended)
 - 🌐 **Google Chrome browser** (latest version)
-- 🔧 **Git** for version control
+- 🔧 **Git** for version control (optional)
 
-### 📥 Installation  
+### 📥 Installation Methods
+
+#### Method 1: For Developers (Recommended)
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/Algozenith/chrome-ext-problem-tracker.git
+   git clone https://github.com/Nishkarsh0Sharma/chrome-ext-problem-tracker.git
    cd chrome-ext-problem-tracker
    ```
 
 2. **Load the Extension in Chrome**  
    - Open Chrome and navigate to `chrome://extensions/`
    - Enable **Developer Mode** (toggle switch at the top-right)
-   - Click **Load unpacked** and select the `Starter Files/` folder
+   - Click **Load unpacked** and select the project folder
    - The extension icon should appear in your Chrome toolbar
 
-3. **Verify Installation**
-   - Look for the AZ Problem Tracker icon in your extensions toolbar
-   - Click the icon to open the popup interface
-   - Visit [maang.in](https://maang.in) to test bookmarking functionality
+#### Method 2: Direct Download
+
+1. **Download ZIP**
+   - Click the green "Code" button on GitHub
+   - Select "Download ZIP"
+   - Extract the downloaded file
+
+2. **Load in Chrome**
+   - Follow step 2 from Method 1 above
+
+### � Verification Steps
+
+1. ✅ Look for the AZ Problem Tracker icon in your extensions toolbar
+2. ✅ Click the icon to open the popup interface  
+3. ✅ Visit [maang.in](https://maang.in) and navigate to any problem page
+4. ✅ Look for the bookmark button next to the problem title
+5. ✅ Test bookmarking functionality
 
 ---
 
 ## 🎮 How to Use  
 
-### Bookmarking Problems
+### 📌 Bookmarking Problems
+
 1. 🌐 **Navigate** to [maang.in](https://maang.in) and browse to any problem page
 2. 🔖 **Click** the bookmark button that appears next to the problem title
 3. ✅ **Confirm** the bookmark is saved (check the extension popup)
 
-### Managing Bookmarks
+### 📊 Managing Bookmarks
+
 1. 🖱️ **Click** the extension icon in your Chrome toolbar
 2. 📋 **View** all your saved bookmarks in the popup
 3. ▶️ **Play button**: Opens the problem in a new tab
-4. 🗑️ **Delete button**: Removes bookmark (with confirmation)
+4. 🗑️ **Delete button**: Removes bookmark (with confirmation dialog)
 
-### Features in Action
+### 🔍 Features in Action
+
 - 🚫 **Duplicate Prevention**: Already bookmarked problems won't be added again
 - 🔄 **Real-time Sync**: Bookmarks sync across your Chrome devices
 - 💬 **User Feedback**: Confirmation dialogs for important actions
+- 🎯 **Smart Detection**: Automatically detects problem pages on maang.in
 
 ---
 
 ## 🛠️ Technical Implementation
 
-### Core Technologies
-- **Manifest V3**: Latest Chrome extension format
+### 🏗️ Core Technologies
+
+- **Manifest V3**: Latest Chrome extension format with enhanced security
 - **Content Scripts**: DOM manipulation and UI injection
 - **Storage API**: Persistent data storage with Chrome sync
-- **Background Scripts**: Service worker for extension lifecycle
+- **Service Workers**: Background processing and extension lifecycle management
 
-### Key Components
+### 🔧 Key Components
+
 ```javascript
-// Example: Bookmark button injection
+// Example: Smart bookmark button injection
 function addBookmarkButton() {
+    // Check if we're on a problem page and button doesn't exist
     if (!onProblemPage() || document.getElementById("add-bookmark-button")) return;
     
     const bookmarkButton = document.createElement('img');
     bookmarkButton.id = "add-bookmark-button";
     bookmarkButton.src = chrome.runtime.getURL("assets/bookmark.png");
     
-    // Insert button and add event listener
-    insertButton(bookmarkButton);
-    bookmarkButton.addEventListener('click', addNewBookmarkHandler);
+    // Insert button into DOM and add event listener
+    insertButtonIntoPage(bookmarkButton);
+    bookmarkButton.addEventListener('click', handleBookmarkCreation);
+}
+
+// Example: Storage management
+async function saveBookmark(problemData) {
+    const existingBookmarks = await getStoredBookmarks();
+    const updatedBookmarks = [...existingBookmarks, problemData];
+    
+    await chrome.storage.sync.set({ 
+        AZ_PROBLEM_KEY: updatedBookmarks 
+    });
 }
 ```
 
+### 📊 Architecture Overview
+
+```
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Content.js    │    │    Popup.js      │    │  Background.js  │
+│                 │    │                  │    │                 │
+│ • DOM Detection │◄──►│ • UI Management  │◄──►│ • Service Worker│
+│ • Button Inject │    │ • Event Handling │    │ • Extension API │
+│ • User Events   │    │ • Data Display   │    │ • Permissions   │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                        │                        │
+         └────────────────────────┼────────────────────────┘
+                                  ▼
+                    ┌──────────────────────────┐
+                    │    Chrome Storage API    │
+                    │                          │
+                    │ • Sync Across Devices    │
+                    │ • Persistent Storage     │
+                    │ • Automatic Backup       │
+                    └──────────────────────────┘
+```
+
 ---
 
-## 🎓 Learn While Building  
+## 🎓 Learning & Development
 
-This project is structured as a hands-on learning experience:
+### 📚 Educational Value
 
-### 📚 Concepts Covered
-- 🏗️ **Chrome Extension Architecture**: Understanding manifest files, permissions, and extension lifecycle
-- 🎯 **Content Scripts**: Injecting JavaScript into web pages and DOM manipulation
-- 💾 **Storage API**: Saving and retrieving data with Chrome's sync storage
-- 🎨 **UI Development**: Creating responsive popups and user interfaces
-- 🐛 **Debugging**: Using Chrome DevTools for extension development
+This project is perfect for learning:
+- 🏗️ **Chrome Extension Architecture**: Manifest files, permissions, and lifecycle
+- 🎯 **Content Script Development**: DOM manipulation and web page interaction
+- 💾 **Storage Management**: Chrome API usage and data persistence
+- 🎨 **UI/UX Design**: Creating responsive popup interfaces
+- 🐛 **Debugging Techniques**: Using Chrome DevTools for extensions
 - 🔧 **Best Practices**: Code organization, error handling, and user experience
 
 ### 🛤️ Development Journey
-1. **Setup**: Configure manifest and basic file structure
-2. **Content Injection**: Add bookmark button to problem pages
-3. **Data Management**: Implement storage and retrieval systems
-4. **User Interface**: Build and style the popup interface
-5. **Enhancement**: Add confirmation dialogs and error handling
-6. **Testing**: Debug and optimize the extension
 
----
+1. **Foundation** → Set up manifest and basic file structure
+2. **Core Logic** → Implement bookmark detection and storage
+3. **User Interface** → Build and style the popup interface  
+4. **Enhancement** → Add confirmation dialogs and error handling
+5. **Optimization** → Performance tuning and cross-device sync
+6. **Testing** → Debug and validate across different scenarios
 
-## 🔧 Development Setup
+### 🔧 Development Setup
 
-### Local Development
 ```bash
-# Clone and setup
-git clone https://github.com/Algozenith/chrome-ext-problem-tracker.git
+# Clone the repository
+git clone https://github.com/Nishkarsh0Sharma/chrome-ext-problem-tracker.git
 cd chrome-ext-problem-tracker
 
-# Work with starter files
-cd "Starter Files"
+# Open in your favorite editor
+code .
 
-# Make your changes and reload extension in Chrome
+# Load in Chrome for testing
+# Navigate to chrome://extensions/
+# Enable Developer Mode
+# Click "Load unpacked" and select the project folder
 ```
 
-### Debugging Tips
-- 🔍 **Content Script**: Right-click on webpage → Inspect → Console tab
-- 🔧 **Popup**: Right-click extension icon → Inspect popup
-- 📊 **Background**: Visit `chrome://extensions/` → Background page
-- 🔄 **Reload**: Click reload button in `chrome://extensions/` after changes
+### 🐛 Debugging Tips
+
+| Component | Debug Method | Location |
+|-----------|-------------|----------|
+| **Content Scripts** | Right-click webpage → Inspect → Console | Web page console |
+| **Popup Scripts** | Right-click extension icon → Inspect popup | Popup console |
+| **Background Scripts** | chrome://extensions/ → Background page | Service worker |
+| **Manifest Issues** | chrome://extensions/ → Extension details | Extension page |
 
 ---
 
 ## 🚀 Future Enhancements
 
-Consider implementing these advanced features:
-- 🏷️ **Tags & Categories**: Organize bookmarks by topic or difficulty
-- 📊 **Progress Tracking**: Monitor solved vs. unsolved problems
-- 🔍 **Search & Filter**: Find bookmarks quickly
-- 📱 **Export/Import**: Backup and restore bookmark data
-- 🎨 **Themes**: Dark mode and customizable UI
-- 🔔 **Notifications**: Reminders for practice sessions
+### 🎯 Planned Features
+
+- 🏷️ **Tags & Categories**: Organize bookmarks by topic, difficulty, or status
+- 📊 **Progress Tracking**: Visual dashboard showing solved vs. unsolved problems
+- 🔍 **Advanced Search**: Filter bookmarks by name, tags, or date added
+- 📱 **Export/Import**: Backup and restore bookmark data (JSON/CSV)
+- 🎨 **Theme Support**: Dark mode and customizable color schemes
+- 🔔 **Smart Notifications**: Reminders for practice sessions and review
+- 📈 **Analytics**: Problem-solving statistics and progress insights
+- 🌐 **Multi-Platform**: Support for additional coding platforms
+
+### 💡 Enhancement Ideas
+
+- **Difficulty Rating**: Personal difficulty assessment for each problem
+- **Time Tracking**: Record time spent on each problem
+- **Notes System**: Add personal notes and solution approaches
+- **Study Plans**: Pre-built and custom study schedules
+- **Social Features**: Share bookmark collections with friends
+- **Integration**: Connect with GitHub, LeetCode, and other platforms
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please feel free to:
-- 🐛 Report issues and bugs
-- 💡 Suggest new features
-- 🔧 Submit pull requests
-- 📖 Improve documentation
+We welcome contributions from the community! Here's how you can help:
+
+### 🔧 Ways to Contribute
+
+- 🐛 **Report Bugs**: Found an issue? Create a detailed bug report
+- 💡 **Suggest Features**: Have ideas? Share them in the issues section
+- 🔧 **Submit Pull Requests**: Fix bugs or implement new features
+- 📖 **Improve Documentation**: Help make our docs even better
+- 🎨 **Design Assets**: Contribute icons, UI improvements, or themes
+
+### 📋 Contribution Guidelines
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+### 🏆 Contributors
+
+Thanks to all the amazing people who have contributed to this project!
+
+<!-- Contributors will be automatically added here -->
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+### 📋 License Summary
+
+✅ **Permissions**: Use, copy, modify, merge, publish, distribute, sublicense, sell  
+❌ **Limitations**: No warranty, no liability  
+📝 **Conditions**: Include license and copyright notice  
+
+---
+
+## 🆘 Support & FAQ
+
+### ❓ Frequently Asked Questions
+
+<details>
+<summary><strong>Q: The bookmark button doesn't appear on problem pages</strong></summary>
+
+**A:** Make sure you're on a problem page that starts with `/problems/` in the URL. Try refreshing the page or checking if the extension is enabled.
+</details>
+
+<details>
+<summary><strong>Q: My bookmarks disappeared after restarting Chrome</strong></summary>
+
+**A:** This extension uses Chrome sync storage, so bookmarks should persist. Check if you're signed into Chrome and sync is enabled.
+</details>
+
+<details>
+<summary><strong>Q: Can I use this extension on other coding platforms?</strong></summary>
+
+**A:** Currently, this extension is specifically designed for maang.in. Support for other platforms is planned for future releases.
+</details>
+
+<details>
+<summary><strong>Q: How do I backup my bookmarks?</strong></summary>
+
+**A:** Currently, bookmarks are automatically synced with your Chrome account. Manual export/import functionality is planned for a future update.
+</details>
+
+### 🐛 Found a Bug?
+
+If you encounter any issues:
+
+1. Check the [Issues](https://github.com/Nishkarsh0Sharma/chrome-ext-problem-tracker/issues) page
+2. If your issue isn't listed, create a new issue with:
+   - Clear description of the problem
+   - Steps to reproduce
+   - Expected vs actual behavior
+   - Screenshots (if applicable)
+   - Browser version and OS
 
 ---
 
 ## 👨‍💻 Author
 
-**Nishkarsh Sharma**  
-*Chrome Extension Developer & Educator*
+<div align="center">
+  <img src="https://github.com/Nishkarsh0Sharma.png" width="100" height="100" style="border-radius: 50%;" alt="Nishkarsh Sharma">
+  
+  **Nishkarsh Sharma**  
+  *Chrome Extension Developer & Educator*
+  
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nishkarsh0Sharma)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nishkarsh-sharma)
+  [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nishkarsh.sharma@example.com)
+</div>
+
+---
+
+## 🙏 Acknowledgments
+
+- 💡 **Inspiration**: The need for better problem tracking in competitive programming
+- 🎨 **Icons**: Custom designed icons for the extension
+- 📚 **Documentation**: Inspired by best practices in open source projects
+- 🌟 **Community**: Thanks to all users who provided feedback and suggestions
 
 ---
 
 <div align="center">
-  <h3>Happy Coding! 🚀</h3>
-  <p><i>Build something amazing, one extension at a time!</i></p>
+  <h3>⭐ If you found this project helpful, please give it a star! ⭐</h3>
+  <p>
+    <strong>Happy Coding! 🚀</strong><br>
+    <em>Build something amazing, one extension at a time!</em>
+  </p>
+  
+  <hr>
+  
+  <sub>
+    Made with ❤️ by <a href="https://github.com/Nishkarsh0Sharma">Nishkarsh Sharma</a><br>
+    © 2025 Chrome Extension: AZ Problem Tracker. All rights reserved.
+  </sub>
 </div>
